@@ -6,8 +6,6 @@ import org.openqa.selenium.*;
 
 import java.util.logging.Level;
 
-import static framework.Driver.setInstanceOfDriver;
-
 public class BaseClass extends LoggerClass{
 
     @BeforeAll
@@ -19,15 +17,15 @@ public class BaseClass extends LoggerClass{
             getUrl();
         }
         catch (NoSuchElementException noSuchElementException) {
-            logging(Level.SEVERE, "Exception is No Such Element Exception");
-        } catch (NoSuchFrameException e) {
-            logging(Level.INFO, "Exception is No Such Frame Exception");
-        } catch (NoAlertPresentException e) {
-            logging(Level.WARNING, "Exception is No Alert Present Exception");
-        } catch (ElementNotVisibleException e) {
-            logging(Level.FINE, "Exception is Element Not Visible Exception");
-        } catch (ElementNotSelectableException e) {
-            logging(Level.INFO, "Exception is Element Not Selectable Exception");
+            logging(Level.SEVERE, "Exception Thrown :" + noSuchElementException.getMessage());
+        } catch (NoSuchFrameException noSuchFrameException) {
+            logging(Level.INFO, "Exception Thrown :" + noSuchFrameException.getMessage());
+        } catch (NoAlertPresentException noAlertPresentException) {
+            logging(Level.WARNING, "Exception Thrown :" + noAlertPresentException.getMessage());
+        } catch (ElementNotVisibleException elementNotVisibleException) {
+            logging(Level.FINE, "Exception Thrown :" + elementNotVisibleException.getMessage());
+        } catch (ElementNotSelectableException elementNotSelectableException) {
+            logging(Level.INFO, "Exception Thrown :" + elementNotSelectableException.getMessage());
         } catch (Exception exception) {
             logging(Level.INFO, "Exception Thrown :" + exception.getMessage());
         }
