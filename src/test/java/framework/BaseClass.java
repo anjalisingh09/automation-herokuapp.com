@@ -9,8 +9,7 @@ import java.util.logging.Level;
 public class BaseClass extends LoggerClass{
 
     @BeforeAll
-    public void setup(){
-        driver = setInstanceOfDriver();
+    public static void setup(){
         try {
             driver = setInstanceOfDriver();
             logger = setInstanceOfLogger();

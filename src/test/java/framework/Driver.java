@@ -10,6 +10,7 @@ public class Driver {
 
     public static WebDriver setInstanceOfDriver(){
         driver = new ChromeDriver();
+        driver.manage().window().maximize();
 //        driver = new FirefoxDriver();
 
         return driver;
