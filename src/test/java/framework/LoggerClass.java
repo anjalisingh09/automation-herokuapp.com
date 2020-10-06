@@ -12,6 +12,6 @@ public class LoggerClass extends Driver {
     }
 
     public static void logging(Level level, String message) {
-        logger.log(level,message);
+        logger.log(level, message);
     }
 }

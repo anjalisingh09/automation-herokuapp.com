@@ -6,16 +6,16 @@ import org.openqa.selenium.*;
 
 import java.util.logging.Level;
 
-public class BaseClass extends LoggerClass{
+public class BaseClass extends PageFactory {
 
     @BeforeAll
-    public static void setup(){
+    public static void setup() {
         try {
             driver = setInstanceOfDriver();
             logger = setInstanceOfLogger();
+            setInstanceOfPage();
             getUrl();
-        }
-        catch (NoSuchElementException noSuchElementException) {
+        } catch (NoSuchElementException noSuchElementException) {
             logging(Level.SEVERE, "Exception Thrown :" + noSuchElementException.getMessage());
         } catch (NoSuchFrameException noSuchFrameException) {
             logging(Level.INFO, "Exception Thrown :" + noSuchFrameException.getMessage());
@@ -35,7 +35,7 @@ public class BaseClass extends LoggerClass{
     }
 
     @AfterAll
-    public static void tearDown(){
+    public static void tearDown() {
         driver.close();
     }
 }
