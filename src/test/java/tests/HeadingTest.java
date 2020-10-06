@@ -9,10 +9,12 @@ public class HeadingTest extends BaseClass {
     @Test
     void printHeading() {
         Assertions.assertEquals("Welcome to the-internet", getHeadingPage().displayHeading());
+
     }
 
     @Test
     void addOrDeleteElement() {
         Assertions.assertEquals("Add/Remove Elements", getHeadingPage().addOrRemoveElement());
+
     }
 }
