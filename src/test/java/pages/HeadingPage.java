@@ -38,6 +38,7 @@ public class HeadingPage extends LoggerClass {
         addElement.click();
         Wait.explicitWait(ExpectedConditions.elementToBeClickable(deleteElement.get(0)));
         deleteElement.get(0).click();
+        
         return addRemoveHeading.getText();
     }
 }
