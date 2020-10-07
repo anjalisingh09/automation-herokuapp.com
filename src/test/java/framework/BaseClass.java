@@ -1,16 +1,19 @@
 package framework;
 
+import org.apache.commons.io.FileUtils;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.*;
 
+import java.io.File;
 import java.util.logging.Level;
 
 import static framework.Driver.setInstanceOfDriver;
 
 public class BaseClass extends LoggerClass{
 
-    @BeforeAll
+//    @BeforeAll
     public void setup(){
         driver = setInstanceOfDriver();
         try {
@@ -37,7 +40,8 @@ public class BaseClass extends LoggerClass{
         driver.get("https://the-internet.herokuapp.com/");
     }
 
-    @AfterAll
+
+//    @AfterAll
     public static void tearDown(){
         driver.close();
     }
