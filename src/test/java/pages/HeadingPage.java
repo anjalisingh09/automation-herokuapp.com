@@ -9,14 +9,19 @@ import java.util.List;
 public class HeadingPage extends LoggerClass {
     @FindBy(css = "h1.heading")
     WebElement heading;
+    
     @FindBy(css = "a[href='/add_remove_elements/']")
     WebElement addOrRemove;
+    
     @FindBy(xpath = "//*[@id=\"content\"]/div/button")
     WebElement addElement;
+    
     @FindBy(css = "h3")
     WebElement addRemoveHeading;
+    
     @FindBy(css = "button.added-manually")
     List<WebElement> deleteElement;
+    
     public HeadingPage() {
         PageFactory.initElements(driver, this);
     }
