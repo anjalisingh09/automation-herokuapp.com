@@ -1,0 +1,8 @@
+# Build service with integration tests
+version: '1.0'
+
+steps:
+  tests:
+    image: markhobson/maven-chrome:jdk-11
+    commands:
+      - ./gradlew test
