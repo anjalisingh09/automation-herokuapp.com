@@ -27,10 +27,8 @@ public class HeadingPage extends LoggerClass {
     public String addOrRemoveElement(){
         Wait.explicitWait(ExpectedConditions.elementToBeClickable(addOrRemove));
         addOrRemove.click();
-        System.out.println("Addo or remove");
         Wait.explicitWait(ExpectedConditions.elementToBeClickable(addElement));
         addElement.click();
-        System.out.println("Button");
         Wait.explicitWait(ExpectedConditions.elementToBeClickable(addElement));
         addElement.click();
         Wait.explicitWait(ExpectedConditions.elementToBeClickable(deleteElement.get(0)));

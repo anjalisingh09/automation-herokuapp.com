@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class Driver {
 
-    static WebDriver driver;
+    protected static WebDriver driver;
 
     public static WebDriver setInstanceOfDriver(){
         driver = new ChromeDriver();
